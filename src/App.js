@@ -1,10 +1,11 @@
 import React from 'react';
 import { Reset } from './styles/reset';
+import CTA from './components/CTA/CTA'
 
 function App() {
   return (
     <div>
-      <h1>hello, paris</h1>
+      <CTA/>
       <Reset />
     </div>
   );
