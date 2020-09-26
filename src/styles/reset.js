@@ -9,13 +9,18 @@ export const Reset = createGlobalStyle`
     outline: none;
 }
 
-body {
+.app {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 0 40px 0 40px;
 }
-body, input, button, textarea {
+
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
+body, button, textarea {
     text-rendering: optimizeLegibility !important;
         -webkit-font-smoothing: antialiased !important;
         font-family: 'Poppins', sans-serif;

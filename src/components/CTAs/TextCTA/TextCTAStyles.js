@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 export const CTADiv = styled.div`
   width: 100%;
-  margin: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   h1,
   p {
@@ -15,6 +19,7 @@ export const CTADiv = styled.div`
     max-width: 450px;
     line-height: 42px;
     margin-bottom: 25px;
+    text-align: left;
   }
 
   p {
