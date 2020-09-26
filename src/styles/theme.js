@@ -11,5 +11,5 @@ export default {
 
     borderRadius: '11px',
 
-    primaryShadow: '0px 7px 0px -1px rgba(0,0,0,0.12)',
+    primaryShadow: '0px 7px 0px -1px rgba(0,0,0,0.22)',
 }

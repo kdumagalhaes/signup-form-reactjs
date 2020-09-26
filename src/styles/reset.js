@@ -11,16 +11,19 @@ export const Reset = createGlobalStyle`
 
 .app {
     height: 100vh;
+    width: 100%;
+    max-width: 1150px;
     display: flex;
     align-items: center;
     padding: 0 40px 0 40px;
+    margin: 0 auto;
 }
 
-input {
+input, button {
     font-family: 'Poppins', sans-serif;
 }
 
-body, button, textarea {
+body, textarea {
     text-rendering: optimizeLegibility !important;
         -webkit-font-smoothing: antialiased !important;
         font-family: 'Poppins', sans-serif;
