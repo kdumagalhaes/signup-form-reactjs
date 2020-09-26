@@ -21,4 +21,8 @@ export const SuccessBtnTag = styled.button `
         box-shadow: none;
         transform: translateY(4px);
     }
+
+    @media (max-width: 375px) {
+        font-size: 1rem;
+    }
 `

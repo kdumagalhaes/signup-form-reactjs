@@ -8,6 +8,10 @@ export const FormDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 375px) {
+    margin-bottom: 40px;
+  }
 `;
 
 export const FormTag = styled.div`
@@ -19,6 +23,10 @@ export const FormTag = styled.div`
   background-color: #fff;
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.primaryShadow};
+
+  @media (max-width: 375px) {
+    padding: 20px;
+  }
 
   input {
     margin-bottom: 20px;
@@ -39,6 +47,12 @@ export const FormTag = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.colors.color5};
     font-weight: 600;
+
+    @media (max-width: 375px) {
+      display: block;
+      max-width: 250px;
+      margin: 0 auto;
+    }
 
     a {
       color: ${({ theme }) => theme.colors.color1};

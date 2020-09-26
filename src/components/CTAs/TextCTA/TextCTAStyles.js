@@ -20,11 +20,21 @@ export const CTADiv = styled.div`
     line-height: 42px;
     margin-bottom: 25px;
     text-align: left;
+
+    @media (max-width: 375px) {
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 70px 25px 20px 0;
+    }
   }
 
   p {
     font-weight: 600;
     font-size: 0.9rem;
     max-width: 500px;
+
+    @media (max-width: 375px) {
+      margin-bottom: 50px;
+    }
   }
 `;

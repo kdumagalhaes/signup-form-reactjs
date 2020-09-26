@@ -17,6 +17,12 @@ export const Reset = createGlobalStyle`
     align-items: center;
     padding: 0 40px 0 40px;
     margin: 0 auto;
+
+    @media (max-width: 375px) {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 25px 0 25px;
+    }
 }
 
 input, button {
