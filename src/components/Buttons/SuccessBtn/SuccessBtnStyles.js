@@ -7,7 +7,7 @@ export const SuccessBtnTag = styled.button `
     border: none;
     border-radius: 5px;
     box-shadow: 0px 4px 0px 0px hsl(154, 59%, 41%);
-    margin-bottom: 20px;
+    margin: 20px 0;
     transform: translateY();
     transition: box-shadow 0.2s, transform 0.2s;
     color: #fff;

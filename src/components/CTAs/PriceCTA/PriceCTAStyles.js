@@ -7,15 +7,15 @@ export const PriceCTADiv = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.primaryShadow};
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 
   span {
     color: #fff;
     text-align: center;
-
+    
     @media (max-width: 375px) {
-        display: block;
         width: 190px;
-        margin: 0 auto;
     }
   }
 `;

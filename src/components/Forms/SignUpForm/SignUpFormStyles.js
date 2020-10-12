@@ -14,7 +14,7 @@ export const FormDiv = styled.div`
   }
 `;
 
-export const FormTag = styled.div`
+export const FormTag = styled.form`
   width: 100%;
   height: auto;
   padding: 40px;
@@ -28,21 +28,18 @@ export const FormTag = styled.div`
     padding: 20px;
   }
 
-  input {
-    margin-bottom: 20px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    padding: 0 20px;
-    font-weight: 500;
-
-    &:focus {
-      border: 1px solid #282828;
-    }
+  span {
+    color: ${({theme}) => theme.colors.color1};
+    margin-top: 5px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
   }
 
-  span {
+
+
+  p {
     font-size: 0.7rem;
     text-align: center;
     color: ${({ theme }) => theme.colors.color5};

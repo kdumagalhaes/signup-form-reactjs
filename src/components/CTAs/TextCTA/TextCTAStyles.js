@@ -25,6 +25,7 @@ export const CTADiv = styled.div`
       font-size: 1.8rem;
       text-align: center;
       margin: 70px 25px 20px 0;
+      max-width: 100%;
     }
   }
 
