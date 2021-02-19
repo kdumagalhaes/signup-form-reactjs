@@ -28,6 +28,20 @@ export const FormTag = styled.form`
     padding: 20px;
   }
 
+  input {
+    margin-top: 20px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    font-weight: 500;
+
+    &:focus {
+      border: 1px solid #282828;
+    }
+  }
+
   span {
     color: ${({theme}) => theme.colors.color1};
     margin-top: 5px;
@@ -36,8 +50,6 @@ export const FormTag = styled.form`
     font-style: italic;
     text-align: right;
   }
-
-
 
   p {
     font-size: 0.7rem;

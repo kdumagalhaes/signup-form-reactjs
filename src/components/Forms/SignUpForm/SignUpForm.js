@@ -4,59 +4,51 @@ import { useForm } from 'react-hook-form';
 
 import PriceCTA from '../../CTAs/PriceCTA/PriceCTA';
 import SuccessBtn from '../../Buttons/SuccessBtn/SuccessBtn';
-import Input from '../../Forms/SignUpForm/Inputs/Inputs'
+import ErrorMessage from './ErrorMessage';
 
-
-const SignUpForm = (() => {
+const SignUpForm = () => {
   const { register, handleSubmit, errors } = useForm();
-  
-  const onSubmit = (data) => {
-    console.log(data)
-  }
-
 
   return (
     <FormDiv>
       <PriceCTA />
-      <FormTag onSubmit={handleSubmit(onSubmit)} noValidate>
-        <Input
-          register={register}
+      <FormTag onSubmit={handleSubmit()} noValidate>
+        <input
+          ref={register({ required: true })}
           name="firstName"
           type="text"
           placeholder="First Name"
           autoFocus
-          errors={errors}
+          errors
         />
-        {errors.firstName && <p>First Name cannot be empty</p>}
+        <ErrorMessage error={errors.firstName} />
 
-        <Input
+        <input
           name="lastName"
           type="text"
           placeholder="Last Name"
-          register={register}
+          ref={register({ required: true })}
           errors
-
         />
-        {errors.lastName && <p>Last Name cannot be empty</p>}
+        <ErrorMessage error={errors.lastName} />
 
-        <Input
+        <input
           name="email"
           type="email"
           placeholder="Email Address"
-          register={register}
+          ref={register({ required: true })}
           errors
-
         />
-        {errors.email && errors.email.type === 'required' && (<p>Email cannot be empty</p>)}
-        {errors.email && errors.email.type === 'pattern' && (<p>Looks like this is not an email</p>)}
+        <ErrorMessage error={errors.email} />
 
-        <Input
+        <input
           name="password"
           type="password"
           placeholder="Password"
-          register={register}
+          ref={register({ required: true })}
           errors
         />
+        <ErrorMessage error={errors.password} />
 
         <SuccessBtn />
         <p>
@@ -66,6 +58,6 @@ const SignUpForm = (() => {
       </FormTag>
     </FormDiv>
   );
-});
+};
 
 export default SignUpForm;
