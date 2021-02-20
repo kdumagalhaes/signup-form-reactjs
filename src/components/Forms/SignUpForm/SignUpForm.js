@@ -36,7 +36,7 @@ const SignUpForm = () => {
           name="email"
           type="email"
           placeholder="Email Address"
-          ref={register({ pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })}
+          ref={register({ pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, required: true })}
           errors
         />
         <ErrorMessage error={errors.email} />
