@@ -4,15 +4,14 @@ import { useForm } from 'react-hook-form';
 
 import PriceCTA from '../../CTAs/PriceCTA/PriceCTA';
 import SuccessBtn from '../../Buttons/SuccessBtn/SuccessBtn';
-import ErrorMessage from './ErrorMessage';
 
 const SignUpForm = () => {
   const { register, handleSubmit, errors } = useForm();
 
   // eslint-disable-next-line
   const alertOutline = {
-    backgroundColor: "red",
-  }
+    backgroundColor: 'red',
+  };
 
   return (
     <FormDiv>
@@ -24,9 +23,9 @@ const SignUpForm = () => {
           type="text"
           placeholder="First Name"
           autoFocus
-          errors 
+          errors
         />
-        <ErrorMessage error={errors.firstName} />
+        {errors.firstName && <span>First name is required</span>}
 
         <input
           name="lastName"
@@ -35,17 +34,20 @@ const SignUpForm = () => {
           ref={register({ required: true })}
           errors
         />
-        <ErrorMessage error={errors.lastName} />
+        {errors.lastName && <span>Last name is required</span>}
 
         <input
           name="email"
           type="email"
           placeholder="Email Address"
-          ref={register({ pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, required: true })}
+          ref={register({
+            pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+            required: true,
+          })}
           errors
           className
         />
-        <ErrorMessage error={errors.email} />
+        {errors.email && <span>Looks like this is not an email</span>}
 
         <input
           name="password"
@@ -54,7 +56,7 @@ const SignUpForm = () => {
           ref={register({ required: true })}
           errors
         />
-        <ErrorMessage error={errors.password} />
+        {errors.password && <span>Password is required</span>}
 
         <SuccessBtn />
         <p>
