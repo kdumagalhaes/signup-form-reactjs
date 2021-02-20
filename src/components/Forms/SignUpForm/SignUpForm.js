@@ -9,6 +9,11 @@ import ErrorMessage from './ErrorMessage';
 const SignUpForm = () => {
   const { register, handleSubmit, errors } = useForm();
 
+  // eslint-disable-next-line
+  const alertOutline = {
+    backgroundColor: "red",
+  }
+
   return (
     <FormDiv>
       <PriceCTA />
@@ -19,7 +24,7 @@ const SignUpForm = () => {
           type="text"
           placeholder="First Name"
           autoFocus
-          errors
+          errors 
         />
         <ErrorMessage error={errors.firstName} />
 
@@ -38,6 +43,7 @@ const SignUpForm = () => {
           placeholder="Email Address"
           ref={register({ pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, required: true })}
           errors
+          className
         />
         <ErrorMessage error={errors.email} />
 

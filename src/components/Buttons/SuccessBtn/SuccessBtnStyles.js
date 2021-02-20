@@ -9,7 +9,7 @@ export const SuccessBtnTag = styled.button `
     box-shadow: 0px 4px 0px 0px hsl(154, 59%, 41%);
     margin: 20px 0;
     transform: translateY();
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.1s, transform 0.1s;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
